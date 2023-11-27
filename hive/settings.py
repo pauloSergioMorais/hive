@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TOKEN_CSRF = os.getenv('TOKEN_CSRF')
 if TOKEN_CSRF:
   SECRET_KEY = TOKEN_CSRF
-  CSRF_TRUSTED_ORIGINS = ['https://hive-production-0bba.up.railway.app/']
+  CSRF_TRUSTED_ORIGINS = ['https://hive-production-0bba.up.railway.app']
 else:
     SECRET_KEY = 'django-insecure-&#%c$swjbdbc)$)&(jjg^0=52!3y2ea3)qiv7ag%sjj(n(!9ud'
 
@@ -32,7 +32,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://hive-production-0bba.up.railway.app/", "localhost", '127.0.0.1']
+ALLOWED_HOSTS = ["hive-production-0bba.up.railway.app/", "localhost", '127.0.0.1']
 
 
 # Application definition
