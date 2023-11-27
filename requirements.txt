@@ -15,7 +15,7 @@ executing==2.0.0
 Flask==3.0.0
 gunicorn==21.2.0
 ipykernel==6.25.2
-ipython==8.16.1
+ipython
 itsdangerous==2.1.2
 jedi==0.19.1
 Jinja2==3.1.2
