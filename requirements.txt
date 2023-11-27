@@ -8,6 +8,7 @@ comm==0.1.4
 crispy-bootstrap5==2023.10
 debugpy==1.8.0
 decorator==5.1.1
+dj-database-url==2.1.0
 Django==4.2.7
 django-crispy-forms==2.1
 executing==2.0.0
@@ -30,6 +31,7 @@ Pillow==10.1.0
 platformdirs==3.11.0
 prompt-toolkit==3.0.39
 psutil==5.9.5
+psycopg2==2.9.9
 pure-eval==0.2.2
 Pygments==2.16.1
 python-dateutil==2.8.2
@@ -40,6 +42,7 @@ sqlparse==0.4.4
 stack-data==0.6.3
 tornado==6.3.3
 traitlets==5.11.2
+typing_extensions==4.8.0
 tzdata==2023.3
 wcwidth==0.2.8
 Werkzeug==3.0.0
