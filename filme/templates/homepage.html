@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+HIVE - GESTÃO DE TERCEIROS
+<link rel="shortcut icon" href="https://genfavicon.com/tmp/icon_1ed5121efbf21312e966946931714397.ico" type="image/x-icon">
+{% endblock %}
+
+{% block head %}
+    <style>
+       #id_email {
+        width: 100%;
+        color: black;
+        padding: 10px;
+       } 
+    </style>
+{% endblock%}
+
+
+{% block content %}
+    <header class="min-h-screen bg-black bg-opacity-75 bg-blend-color-burn showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat" style="background-image: url('{% static 'images/background.png' %}'); background-size: 100% 100%;">
+   
+        <div class="z-10 h-full md:py-0 text-gray-100 text-center flex items-center flex-col">
+
+            <h1 class="font-semibold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
+              Gestão documental de empresas e colaboradores terceiros.
+            </h1>
+            <h3 class="text-xl md:text-xl py-5">
+              Controla e notifica o prestador de status de documentos da empresa e de seus colaboradores
+            </h3>
+            <h4 class="text-sm md:text-lg pb-3">
+                Quer começar? Coloque seu e-mail abaixo para acessar.
+            </h4>
+
+            <div class="w-full flex justify-center">
+                <div class="flex justify-center items-center w-11/12 md:w-10/12">
+                    <form method="post" class="w-6/12 justify-center">
+                        {% csrf_token %}
+                        <div class="flex flex-grow items-stretch">
+                            {{ form }}
+                        <button class="bg-green-800 hover:bg-green-950 text-white py-3 px-3 text-2xl" type="submit">
+                            <span>
+                                Acessar
+                            </span>
+                            
+                        </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+        <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10 ">
+            <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                Um novo jeito de gerir contratos!
+            </h2>
+            <h5 class="md:text-xl text-lg">
+              O Hive foi projetado para simplificar a gestão da sua empresa prestadora de serviços e colaboradores, proporcionando uma abordagem rápida, prática e fácil.
+            </h5>
+        </div>
+        <div class='md:w-1/2 flex justify-center items-center'>
+            <img src="{% static 'images/img1.png' %}" class="w-8/12" alt="">
+        </div>
+    </section>
+
+    <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+        <div class='md:w-1/2 flex justify-center items-center '>
+            <img src="{% static 'images/img2.png'' %}" class="w-8/12" alt="">
+        </div>
+
+        <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+            <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                EMPRESAS PRESTADORAS DE SERVIÇOS.
+            </h2>
+            <h5 class="md:text-xl text-lg">
+              O gestor de contrato consegue visualizar o status de validação de documentos de cada empresa e seus colaboradores.
+            </h5>
+        </div>
+
+    </section>
+
+    <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+        <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+            <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                Bem-vindos ao Manual de Apoio do HIVE.
+            </h2>
+            <h5 class="md:text-xl text-lg">
+              Este manual foi cuidadosamente desenvolvido para servir como um guia essencial aos
+              Prestadores de Serviços, no intuito de agilizar e simplificar o processo de cadastro e pesquisa de empresas
+              terceiras. <br> <br>
+              Aproveitem os vídeos e certifiquem-se de colocar em prática as orientações aqui apresentadas. Sua contribuição é fundamental para o sucesso desta iniciativa.
+            </h5>
+        </div>
+        <div class='md:w-1/2 flex justify-center items-center'>
+            <img src="{% static 'images/logo.svg' %}" class="w-9/12" alt="">
+        </div>
+    </section>
+    <footer class=" px-5 py-10 ">
+        <ul class="flex justify-between items-center">
+
+            <li>&copy; 2023</li>
+            <li> Feito com Python (Django)</li>
+            <li>Paulo Sérgio</li>
+        </ul>
+    </footer>
+
+
+{% endblock %}
