@@ -97,7 +97,7 @@ DATABASES = {
     }
 }
 
-DATABASE_URL = os.getenv("DATABASE_PRIVATE_URL")
+DATABASE_URL = "postgresql://postgres:dDbCAe5Feg3cDbEBG-aGEd1G11B65bf6@viaduct.proxy.rlwy.net:52468/railway"
 if DATABASE_URL:
   DATABASES = {
     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
