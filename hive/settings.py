@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import dj_database_url
-import base64
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,21 +22,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+TOKEN_CSRF = os.getenv('TOKEN_CSRF')
 if TOKEN_CSRF:
-    # Converte a string hexadecimal para bytes
-    secret_key_bytes = bytes.fromhex(TOKEN_CSRF)
-    # Codifica os bytes em base64 para obter uma string segura
-    SECRET_KEY = base64.b64encode(secret_key_bytes).decode('utf-8')
-    CSRF_TRUSTED_ORIGINS = ['https://hive-production-0bba.up.railway.app']
+  SECRET_KEY = TOKEN_CSRF
+  CSRF_TRUSTED_ORIGINS = ['https://hive-production-0bba.up.railway.app']
 else:
     SECRET_KEY = 'django-insecure-&#%c$swjbdbc)$)&(jjg^0=52!3y2ea3)qiv7ag%sjj(n(!9ud'
-
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hive-production-0bba.up.railway.app', "localhost", '127.0.0.1']
+ALLOWED_HOSTS = ['https://hive-production-0bba.up.railway.app', "localhost", '127.0.0.1']
 
 
 # Application definition
