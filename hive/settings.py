@@ -33,7 +33,8 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://hive-production-0bba.up.railway.app', "localhost", '127.0.0.1']
+ALLOWED_HOSTS = ['hive-production-0bba.up.railway.app', 'hive-production-14b1.up.railway.app', "localhost", '127.0.0.1']
+
 
 
 # Application definition
