@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TOKEN_CSRF = os.getenv('TOKEN_CSRF')
 if TOKEN_CSRF:
   SECRET_KEY = TOKEN_CSRF
-  CSRF_TRUSTED_ORIGINS = ['https://hive.piresemorais.com.br']
+  CSRF_TRUSTED_ORIGINS = ['https://hive.up.railway.app']
 else:
     SECRET_KEY = 'django-insecure-&#%c$swjbdbc)$)&(jjg^0=52!3y2ea3)qiv7ag%sjj(n(!9ud'
 
@@ -33,7 +33,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hive.piresemorais.com.br', 'hive.piresemorais.com.br', "localhost", '127.0.0.1']
+ALLOWED_HOSTS = ['hive.up.railway.app', 'hive.up.railway.app', "localhost", '127.0.0.1']
 
 
 
