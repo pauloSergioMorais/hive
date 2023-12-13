@@ -33,7 +33,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['treinamentohive.piresemorais.com.br', 'hive.up.railway.app', "localhost", '127.0.0.1']
+ALLOWED_HOSTS = ['treinamentohive.piresemorais.com.br', 'treinamentohive.piresemorais.com.br', "localhost", '127.0.0.1']
 
 
 
